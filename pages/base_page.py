@@ -100,3 +100,10 @@ class Page:
             Verifies the partial url of the page
         """
         self.wait.until(EC.url_contains(expected_part_of_url))
+
+    def scroll_down_to_the_element(self, *locator):
+        """
+            Scrolls down to the element
+        """
+        element = self.find_element(*locator)
+        self.actions.move_to_element(element).perform()
