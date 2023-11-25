@@ -70,6 +70,15 @@ class Page:
         )
         e.click()
 
+    def wait_for_element_appear(self, *locator):
+        """
+            Waits for the element to appear
+        """
+        self.wait.until(
+            EC.visibility_of_element_located(locator),
+            message=f'Element not present: {locator}'
+        )
+
     def wait_for_element_disappear(self, *locator):
         """
             Waits for the element to disappear
