@@ -7,7 +7,6 @@ class MainPage(Page):
     """
         Page Object Model for the main page
     """
-
     MAIN_URL = 'https://cafedaria.com/'
     FOOTER = (
         By.CSS_SELECTOR, 

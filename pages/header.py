@@ -4,6 +4,9 @@ from pages.base_page import Page
 
 
 class Header(Page):
+    """ 
+        Page Object Model for the header
+    """
     TITLE = (By.CSS_SELECTOR, '.brand')
     SUBTITLES = (By.CSS_SELECTOR, '.rd-nav-link')
     SEARCH_ICON = (By.CSS_SELECTOR, '.rd-navbar-search-toggle.toggle-original')
