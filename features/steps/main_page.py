@@ -36,6 +36,11 @@ def click_option(context):
     context.app.header.click_faq_option()
 
 
+@when('Click on the “Careers” option')
+def click_option(context):
+    context.app.header.click_careers_option()   
+
+
 @then('Verify footer title is present')
 def verify_footer_title_is_present(context):
     context.app.main_page.verify_footer_title_is_present()

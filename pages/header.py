@@ -10,6 +10,7 @@ class Header(Page):
     CART_ICON = (By.CSS_SELECTOR, '.icon.icon-sm.mdi.mdi-cart-outline')
     ABOUT_OPTION = (By.XPATH, '//a[contains(text(), "About")]')
     FAQ_OPTION = (By.XPATH, '//a[contains(text(), "FAQ")]')
+    CAREERS_OPTION = (By.XPATH, '//a[contains(text(), "Careers")]')
 
     def verify_title_exists_on_header(self):
         assert self.find_element(*self.TITLE), f'Title is not present'
@@ -33,3 +34,6 @@ class Header(Page):
 
     def click_faq_option(self):
         self.wait_for_element_to_be_clickable_and_click(*self.FAQ_OPTION)
+
+    def click_careers_option(self):
+        self.wait_for_element_to_be_clickable_and_click(*self.CAREERS_OPTION)
