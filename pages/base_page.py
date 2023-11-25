@@ -116,3 +116,10 @@ class Page:
         """
         element = self.find_element(*locator)
         self.actions.move_to_element(element).perform()
+
+    def hover_over_element(self, *locator):
+        """
+            Hovers over the element
+        """
+        element = self.find_element(*locator)
+        self.actions.move_to_element(element).perform()

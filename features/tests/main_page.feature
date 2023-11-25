@@ -17,3 +17,15 @@ Feature: test cases for the main page
         When Click on the “about” option
         Then Verify the word “about” is in the URL
         And Verify the page has a text "A Few Words About Us"
+
+    Scenario: User can click on “about” option and verify the FAQ option
+        Given Open the main page
+        When Hover over the “about” option
+        And Click on the “FAQ” option
+        Then Verify the word “faq” is in the URL
+
+    Scenario: User can click on “about” option and verify the Careers option 
+        Given Open the main page
+        When Hover over the “about” option
+        And Click on the “Careers” option
+        Then Verify the word “careers” is in the URL
