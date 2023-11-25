@@ -8,6 +8,7 @@ class Header(Page):
     SUBTITLES = (By.CSS_SELECTOR, '.rd-nav-link')
     SEARCH_ICON = (By.CSS_SELECTOR, '.rd-navbar-search-toggle.toggle-original')
     CART_ICON = (By.CSS_SELECTOR, '.icon.icon-sm.mdi.mdi-cart-outline')
+    ABOUT_OPTION = (By.XPATH, '//a[contains(text(), "About")]')
 
     def verify_title_exists_on_header(self):
         assert self.find_element(*self.TITLE), f'Title is not present'
@@ -22,3 +23,6 @@ class Header(Page):
     def verify_cart_and_search_icons(self):
         assert self.find_element(*self.SEARCH_ICON), f'Search icon is not present'
         assert self.find_element(*self.CART_ICON), f'Cart icon is not present'
+
+    def click_about_option(self):
+        self.wait_for_element_to_be_clickable_and_click(*self.ABOUT_OPTION)

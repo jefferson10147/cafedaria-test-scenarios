@@ -11,3 +11,9 @@ Feature: test cases for the main page
         When Verify the title Cafedaria exists on the navigation bar
         And Verify there are 6 sub-titles in the navigation bar are clickable
         Then Verify the cart and search icons exists
+
+    Scenario: User can click on “about” option 
+        Given Open the main page
+        When Click on the “about” option
+        Then Verify the word “about” is in the URL
+        And Verify the page has a text "A Few Words About Us"

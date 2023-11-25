@@ -27,3 +27,7 @@ class MainPage(Page):
 
     def verify_footer_contains_a_map(self):
         assert self.find_element(*self.MAP), f'Footer does not contain a map'
+
+    def verify_url_query(self, url_query):
+        self.verify_partial_url(url_query)
+        assert url_query in self.driver.current_url, f'URL query {url_query} is not in the URL'
