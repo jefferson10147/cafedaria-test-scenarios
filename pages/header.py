@@ -11,6 +11,7 @@ class Header(Page):
     ABOUT_OPTION = (By.XPATH, '//a[contains(text(), "About")]')
     FAQ_OPTION = (By.XPATH, '//a[contains(text(), "FAQ")]')
     CAREERS_OPTION = (By.XPATH, '//a[contains(text(), "Careers")]')
+    SHOP_OPTION = (By.XPATH, '//a[contains(text(), "Shop")]')
 
     def verify_title_exists_on_header(self):
         assert self.find_element(*self.TITLE), f'Title is not present'
@@ -37,3 +38,6 @@ class Header(Page):
 
     def click_careers_option(self):
         self.wait_for_element_to_be_clickable_and_click(*self.CAREERS_OPTION)
+
+    def click_shop_option(self):
+        self.wait_for_element_to_be_clickable_and_click(*self.SHOP_OPTION)

@@ -41,6 +41,11 @@ def click_option(context):
     context.app.header.click_careers_option()   
 
 
+@when('Click on the “Shop” option')
+def click_option(context):
+    context.app.header.click_shop_option()
+
+
 @then('Verify footer title is present')
 def verify_footer_title_is_present(context):
     context.app.main_page.verify_footer_title_is_present()
@@ -64,3 +69,8 @@ def verify_url_query(context, url_query):
 @then('Verify the page has a text "{page_text}"')
 def verify_page_has_text(context, page_text):
     context.app.about_page.verify_about_page_has_text(page_text)
+
+
+@then('Verify the shop page has a text "{page_text}"')
+def verify_page_has_text(context, page_text):
+    context.app.shop_page.verify_shop_page_has_text(page_text)
