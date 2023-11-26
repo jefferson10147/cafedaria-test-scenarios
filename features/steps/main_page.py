@@ -46,7 +46,8 @@ def click_option(context):
     context.app.header.click_shop_option()
 
 
-@when('Click on the “Add to cart” button for the first {number_of_products} products')
+@when(
+    'Click on the “Add to cart” button for the first {number_of_products} products')
 def click_add_to_cart_button(context, number_of_products):
     context.app.shop_page.click_add_to_cart_button(number_of_products)
 

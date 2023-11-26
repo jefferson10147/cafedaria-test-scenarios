@@ -4,10 +4,12 @@ from pages.base_page import Page
 
 
 class ContactsPage(Page):
-    """ 
+    """
         Page Object Model for the contact page
     """
-    CONTACTS_TITLE = (By.CSS_SELECTOR, '.col-sm-12.section-mailform-wrap-25 h3')
+    CONTACTS_TITLE = (
+        By.CSS_SELECTOR,
+        '.col-sm-12.section-mailform-wrap-25 h3')
     CONTACTS_NAME_FIELD = (By.ID, 'contacts-name')
     CONTACTS_LASTNAME_FIELD = (By.ID, 'contacts-last-name')
     CONTACTS_EMAIL_FIELD = (By.ID, 'contacts-email')

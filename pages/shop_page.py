@@ -8,7 +8,9 @@ class ShopPage(Page):
         Page Object Model for the shop page
     """
     SHOP_TITLE = (By.CSS_SELECTOR, '.breadcrumbs-custom-title')
-    ADD_TO_CART_BTN = (By.CSS_SELECTOR, '.button.button-sm.button-primary.button-icon.button-icon-left.js-add-to-cart')
+    ADD_TO_CART_BTN = (
+        By.CSS_SELECTOR,
+        '.button.button-sm.button-primary.button-icon.button-icon-left.js-add-to-cart')
 
     def verify_shop_page_has_text(self, page_text):
         self.wait_for_element_appear(*self.SHOP_TITLE)

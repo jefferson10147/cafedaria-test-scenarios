@@ -4,7 +4,7 @@ from pages.base_page import Page
 
 
 class CartPage(Page):
-    """ 
+    """
         Page Object Model for the cart page
     """
     CART_COUNT = (By.CSS_SELECTOR, '.js-cart-items-counter')
