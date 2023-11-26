@@ -38,7 +38,7 @@ def click_option(context):
 
 @when('Click on the “Careers” option')
 def click_option(context):
-    context.app.header.click_careers_option()   
+    context.app.header.click_careers_option()
 
 
 @when('Click on the “Shop” option')

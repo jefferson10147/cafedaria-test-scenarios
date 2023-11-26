@@ -5,9 +5,10 @@ from pages.shop_page import ShopPage
 
 
 class Application:
-    """ 
+    """
         Class for storing the driver and page objects
     """
+
     def __init__(self, driver):
         self.driver = driver
         self.main_page = MainPage(self.driver)

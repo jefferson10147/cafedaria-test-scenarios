@@ -4,7 +4,7 @@ from pages.base_page import Page
 
 
 class Header(Page):
-    """ 
+    """
         Page Object Model for the header
     """
     TITLE = (By.CSS_SELECTOR, '.brand')
@@ -24,10 +24,12 @@ class Header(Page):
         assert len(subtitles) == int(expected_subtitles), f'No subtitles found'
 
         for subtitle in subtitles:
-            assert subtitle.is_enabled(), f'Subtitle {subtitle.text} is not clickable'
+            assert subtitle.is_enabled(
+            ), f'Subtitle {subtitle.text} is not clickable'
 
     def verify_cart_and_search_icons(self):
-        assert self.find_element(*self.SEARCH_ICON), f'Search icon is not present'
+        assert self.find_element(
+            *self.SEARCH_ICON), f'Search icon is not present'
         assert self.find_element(*self.CART_ICON), f'Cart icon is not present'
 
     def click_about_option(self):
