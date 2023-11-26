@@ -44,3 +44,10 @@ Feature: test cases for the main page
         Then Verify the cart has 2 products
         And Verify the word “shopping-cart” is in the URL
         And Verify checkout button is clickable
+
+    Scenario: User can click on “Contacts” option
+        Given Open the main page
+        When Click on the “Contacts” option
+        Then Verify the word “contacts” is in the URL
+        And Verify the contacts page has a text "Get in Touch"
+ 

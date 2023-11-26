@@ -3,6 +3,7 @@ from pages.header import Header
 from pages.about_page import AboutPage
 from pages.shop_page import ShopPage
 from pages.cart_page import CartPage
+from pages.contacts_page import ContactsPage
 
 
 class Application:
@@ -17,3 +18,4 @@ class Application:
         self.about_page = AboutPage(self.driver)
         self.shop_page = ShopPage(self.driver)
         self.cart_page = CartPage(self.driver)
+        self.contact_page = ContactsPage(self.driver)
