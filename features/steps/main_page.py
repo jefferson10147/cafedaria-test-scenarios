@@ -46,6 +46,16 @@ def click_option(context):
     context.app.header.click_shop_option()
 
 
+@when('Click on the “Add to cart” button for the first {number_of_products} products')
+def click_add_to_cart_button(context, number_of_products):
+    context.app.shop_page.click_add_to_cart_button(number_of_products)
+
+
+@when('Click on cart icon')
+def click_cart_icon(context):
+    context.app.header.click_cart_icon()
+
+
 @then('Verify footer title is present')
 def verify_footer_title_is_present(context):
     context.app.main_page.verify_footer_title_is_present()
@@ -74,3 +84,13 @@ def verify_page_has_text(context, page_text):
 @then('Verify the shop page has a text "{page_text}"')
 def verify_page_has_text(context, page_text):
     context.app.shop_page.verify_shop_page_has_text(page_text)
+
+
+@then('Verify the cart has {number_of_products} products')
+def verify_cart_has_two_products(context, number_of_products):
+    context.app.cart_page.verify_cart_has_two_products(number_of_products)
+
+
+@then('Verify checkout button is clickable')
+def verify_checkout_button_is_enabled(context):
+    context.app.cart_page.verify_checkout_button_is_enabled()

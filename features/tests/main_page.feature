@@ -35,3 +35,12 @@ Feature: test cases for the main page
         When Click on the “Shop” option
         Then Verify the word “catalog” is in the URL
         And Verify the shop page has a text "Catalog"
+
+    Scenario: User can add two products to the cart
+        Given Open the main page
+        When Click on the “Shop” option
+        And Click on the “Add to cart” button for the first 2 products
+        And Click on cart icon
+        Then Verify the cart has 2 products
+        And Verify the word “shopping-cart” is in the URL
+        And Verify checkout button is clickable
