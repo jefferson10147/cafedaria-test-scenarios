@@ -50,4 +50,10 @@ Feature: test cases for the main page
         When Click on the “Contacts” option
         Then Verify the word “contacts” is in the URL
         And Verify the contacts page has a text "Get in Touch"
+
+    Scenario: User can click on “Contacts” option and user can fill out the form
+        Given Open the main page
+        When Click on the “Contacts” option
+        And Fill out the form on contacts page
+        Then Verify "Send" button is clickable
  

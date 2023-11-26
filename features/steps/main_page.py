@@ -61,6 +61,11 @@ def click_option(context):
     context.app.header.click_contact_option()
 
 
+@when('Fill out the form on contacts page')
+def fill_out_form(context):
+    context.app.contact_page.fill_out_form()
+
+
 @then('Verify footer title is present')
 def verify_footer_title_is_present(context):
     context.app.main_page.verify_footer_title_is_present()
@@ -104,3 +109,8 @@ def verify_checkout_button_is_enabled(context):
 @then('Verify the contacts page has a text "{page_text}"')
 def verify_page_has_text(context, page_text):
     context.app.contact_page.verify_contacts_page_has_text(page_text)
+
+
+@then('Verify "Send" button is clickable')
+def verify_send_button_is_enabled(context):
+    context.app.contact_page.verify_send_button_is_enabled()
